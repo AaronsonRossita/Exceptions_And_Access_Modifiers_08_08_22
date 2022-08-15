@@ -42,21 +42,21 @@ public class Main {
         item1.defaultFunc();
 
 
-        ArrayList list = new ArrayList<>();
-        list.add(3);
-        list.add("something");
-        list.add(true);
-
+//        ArrayList list = new ArrayList<>();
+//        list.add(3);
+//        list.add("something");
+//        list.add(true);
+//
 //        System.out.println(list);
-
-        ArrayList<Integer> list2 = new ArrayList<Integer>();
-        list2.add(4);
-        list2.add(5);
-
-        ArrayList<String> list3 = new ArrayList<>();
-        list3.add("something");
-
-
+//
+//        ArrayList<Integer> list2 = new ArrayList<Integer>();
+//        list2.add(4);
+//        list2.add(5);
+//
+//        ArrayList<String> list3 = new ArrayList<>();
+//        list3.add("something");
+//
+//
 //        int a = scanner.nextInt();
 //        int b = scanner.nextInt();
 
@@ -71,9 +71,125 @@ public class Main {
 //        weekDay4(1);
 //        trafficLight(478);
 
-        game(10);
-
+//        game(10);
+            classCalc();
+//        System.out.println(" \" \" Hello '' \n World ");
     }
+
+    public static void repeatSwitch(int number){
+        switch (number){
+            case 1:
+                System.out.println("I'm in case one");
+                break;
+            case 2:
+                System.out.println("I'm in case two");
+                break;
+            case 3:
+                System.out.println("I'm in case three");
+                break;
+            default:
+                System.out.println("I'm in default");
+        }
+    }
+
+    public static String returnString(int number){
+        String temp = "";
+        switch (number){
+            case 1:
+                temp = "one";
+                break;
+            case 2:
+                temp = "two";
+                break;
+            case 3:
+                temp = "three";
+                break;
+            case 4:
+                temp = "four";
+                break;
+            case 5:
+                temp = "five";
+                break;
+            default:
+                temp = "not between 1 and 5";
+        }
+        System.out.println("after switch");
+        return temp;
+    }
+    public static void classCalc(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome");
+        System.out.println("Please enter the first number");
+        int a = scanner.nextInt();
+        System.out.println("Please enter the second number");
+        int b = scanner.nextInt();
+        System.out.println("Please choose your operator");
+        System.out.println("For \"+\" type 1, for \"-\" type 2, for \"*\" type 3, for \"/\" type 4");
+        int operator = scanner.nextInt();
+        switch (operator){
+            case 1:
+                sum(a,b);
+                break;
+            case 2:
+                sub(a,b);
+                break;
+            case 3:
+                mult(a,b);
+                break;
+            case 4:
+                div(a,b);
+                break;
+            default:
+                System.out.println("no such operator");
+        }
+        System.out.println("Good bye :)");
+    }
+    public static void calc(){
+        System.out.println("Welcome");
+        System.out.println("Please enter the first number");
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        System.out.println("Please enter the second number");
+        int b = scanner.nextInt();
+        System.out.println("Please choose your operator");
+        System.out.println("For \"+\" type 1, for \"-\" type 2, for \"*\" type 3, for \"/\" type 4");
+        int type = scanner.nextInt();
+        switch (type){
+            case 1:
+                sum(a,b);
+                break;
+            case 2:
+                sub(a,b);
+                break;
+            case 3:
+                mult(a,b);
+                break;
+            case 4:
+                div(a,b);
+                break;
+            default:
+                System.out.println("Not a valid option");
+        }
+        System.out.println("Good bye :)");
+    }
+
+    public static void sum(int a, int b){
+        System.out.println(a+b);
+    }
+    public static void sub(int a, int b){
+        System.out.println(a-b);
+    }
+    public static void mult(int a, int b){
+        System.out.println(a*b);
+    }
+    public static void div(int a, int b){
+        if (b == 0){
+            System.out.println("can't divide by zero");
+        }else{
+            System.out.println(a/b);
+        }
+    }
+
     // && true true true -> true ; true true false -> false
     // || true false false -> true
     public static void game(int x){
